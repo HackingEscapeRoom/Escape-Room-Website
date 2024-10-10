@@ -184,7 +184,10 @@
 
         <div class="form-section content">
             <h2>Formular</h2>
-            <form action="https://formsubmit.co/03e3c684b041bfdaa129cd2de91e2d5c" method="POST" class="form-container">
+            <form action="https://formsubmit.co/03e3c684b041bfdaa129cd2de91e2d5c" method="POST" class="form-container" onsubmit="return validateForm()">
+                <input type="hidden" name="_next" value="https://hackingescaperoom.github.io/Escape-Room/danke.html"> <!-- Ersetze 'deinewebsite.com' mit deiner tatsächlichen Domain -->
+                <input type="hidden" name="_captcha" value="false"> <!-- Deaktiviert reCAPTCHA -->
+
                 <label for="email">E-Mail:</label>
                 <input type="email" id="email" name="email" placeholder="E-Mail" required>
 
@@ -229,7 +232,9 @@
     <div class="sponsors-section content">
         <h2>Sponsoren</h2>
         <div class="sponsors-container">
-            <img src="https://via.placeholder.com/100" alt="Sponsor Logo 1">
+            <a href="https://m.youtube.com/c/aultrade">
+                <img src="A-Ultra_sponsor.jpeg" alt="Sponsor A-Ultra">
+            </a>
             <img src="https://via.placeholder.com/100" alt="Sponsor Logo 2">
             <img src="https://via.placeholder.com/100" alt="Sponsor Logo 3">
         </div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke – Hacking Escape Room</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+
+    <style>
+        /* Grundstil */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #555;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .date {
+            font-size: 16px;
+        }
+
+        /* Hauptinhalt */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Textstil */
+        .content p {
+            font-size: 18px;
+            color: #0f0;
+            margin-bottom: 30px;
+        }
+
+        /* Buttonstil */
+        .back-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Responsive Anpassungen */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 22px;
+            }
+            .content p {
+                font-size: 16px;
+            }
+            .back-btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Hacking Escape Room</h1>
+        <div class="date">30. November 2024, 14:00 Uhr</div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="content">
+        <h2>Danke!</h2>
+        <p>Danke für deine Anmeldung.</p>
+        <a href="index.html" class="back-btn">Zurück zur Hauptseite</a>
+    </div>
+</body>
+</html>
