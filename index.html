@@ -173,7 +173,9 @@
     <div class="content">
         <img src="escape_room.jpeg" alt="Escape Room Bild">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        <p>
+            Entdecke die Welt der Cybergefahren im Hacking Escape Room<br><br>Willkommen zu einem aussergewöhnlichen Erlebnis, das Technikbegeisterte und Rätselliebhaber gleichermassen anspricht – unserem Hacking Escape Room! In diesem spannenden Event hast du die Möglichkeit, in die Welt der Cybersicherheit einzutauchen und in einer sicheren Umgebung hautnah zu erleben, welche Gefahren im digitalen Raum lauern.<br><br>Mit echten Tools wie Kali Linux, die auch von Cyber-Profis genutzt werden, wirst du lernen, wie Hacker vorgehen. Löse herausfordernde Rätsel, decke Schwachstellen auf und setze dein Wissen gezielt ein, um die Aufgaben zu meistern. Dein Ziel ist es, aus dem Raum zu entkommen, bevor die Zeit abläuft – dabei erfährst du auf spannende Weise, wie du dich in der digitalen Welt schützen kannst.<br><br>Bereit, deine IT-Kenntnisse auf das nächste Level zu bringen? Tauche ein, lerne die Tricks der Angreifer kennen und werde fit im sicheren Umgang mit Technik!
+        </p>
 
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/NKCc0Gli3j0?si=Z8lLK4Zp4p_WszG9" 
@@ -183,7 +185,8 @@
         </div>
 
         <div class="form-section content">
-            <h2>Formular</h2>
+            <h2>Anmeldeformular</h2>
+            <p>Bitte fülle das folgende Formular aus, um dich für den Escape Room anzumelden. Die Teilnahmegebühr beträgt 10 CHF pro Person und ist nur vor Ort zu zahlen.</p>
             <form action="https://formsubmit.co/03e3c684b041bfdaa129cd2de91e2d5c" method="POST" class="form-container" onsubmit="return validateForm()">
                 <input type="hidden" name="_next" value="https://hackingescaperoom.github.io/Escape-Room/danke.html"> <!-- Ersetze 'deinewebsite.com' mit deiner tatsächlichen Domain -->
                 <input type="hidden" name="_captcha" value="false"> <!-- Deaktiviert reCAPTCHA -->
@@ -200,25 +203,21 @@
                 <!-- Dropdown für Zeitpunkte -->
                 <label for="zeitpunkt">Zeitpunkt auswählen:</label>
                 <select id="zeitpunkt" name="zeitpunkt" required>
-                    <option value="14:00">14:00 Uhr</option>
-                    <option value="16:00">16:00 Uhr</option>
-                    <option value="18:00">18:00 Uhr</option>
+                    <option value="14:00-14:30">14:00 - 14:30 Uhr</option>
+                    <option value="14:35-15:05">14:35 - 15:05 Uhr</option>
+                    <option value="15:10-15:40">15:10 - 15:40 Uhr</option>
+                    <option value="15:45-16:15">15:45 - 16:15 Uhr</option>
                 </select>
 
                 <!-- Zustimmung -->
                 <div class="consent">
                     <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Ich bin einverstanden, dass meine Daten gesammelt werden.</label>
+                    <label for="consent">Ich stimme zu, dass meine Anmeldeinformationen von hackingescaperoom.tech an FormSubmit weitergeleitet werden, um meine Anmeldung zu bearbeiten.</label>
                 </div>
 
                 <!-- Absenden-Button -->
                 <button type="submit" class="submit-btn">Absenden</button>
             </form>
-        </div>
-
-        <div class="form-side-info">
-            <p>Startzeit: 14:00 Uhr</p>
-            <p>Dauer: ca. 2 Stunden</p>
         </div>
 
         <!-- Google Maps -->
