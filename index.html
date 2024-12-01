@@ -89,7 +89,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .form-container input[type="text"], .form-container input[type="email"], .form-container select {
+        .form-container input[type="text"], .form-container input[type="email"], .form-container select, .form-container textarea {
             width: 100%;
             padding: 10px;
             background-color: #000;
@@ -98,11 +98,6 @@
             box-sizing: border-box;
         }
         .form-container label {
-            color: #fff;
-        }
-        .form-container .consent {
-            display: flex;
-            align-items: center;
             color: #fff;
         }
         .form-container .submit-btn {
@@ -115,30 +110,15 @@
             box-sizing: border-box;
         }
 
-        /* Zeiten */
-        .form-side-info {
-            margin-top: 20px;
-            color: #0f0;
+        /* Mobilgeräte Optimierung */
+        @media (max-width: 600px) {
+            .form-container {
+                flex-direction: column;
+                width: 100%;
+            }
         }
 
-        /* Google Maps responsive 16:9 Ratio */
-        .map-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            margin: 20px 0;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Sponsoren */
+        /* Sponsorenbereich */
         .sponsors-section h2 {
             color: #fff;
         }
@@ -150,14 +130,6 @@
         .sponsors-container img {
             width: 100px;
             height: auto;
-        }
-
-        /* Mobilgeräte Optimierung */
-        @media (max-width: 600px) {
-            .form-container, .sponsors-container {
-                flex-direction: column;
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -177,60 +149,45 @@
             Entdecke die Welt der Cybergefahren im Hacking Escape Room<br><br>Willkommen zu einem aussergewöhnlichen Erlebnis, das Technikbegeisterte und Rätselliebhaber gleichermassen anspricht – unserem Hacking Escape Room! In diesem spannenden Event hast du die Möglichkeit in die Welt der Cybersicherheit einzutauchen und in einer sicheren Umgebung hautnah zu erleben, welche Gefahren im digitalen Raum lauern.<br><br>Mit echten Tools wie Kali Linux, die auch von Cyber-Profis genutzt werden, wirst du lernen, wie Hacker vorgehen. Löse herausfordernde Rätsel, decke Schwachstellen auf und setze dein Wissen gezielt ein, um die Aufgaben zu meistern. Dein Ziel ist es, aus dem Raum zu entkommen, bevor die Zeit abläuft – dabei erfährst du auf spannende Weise, wie du dich in der digitalen Welt schützen kannst.<br><br>Bist du bereit, deine IT-Kenntnisse auf das nächste Level zu bringen? Tauche ein, lerne die Tricks der Angreifer kennen und werde fit im sicheren Umgang mit Technik!
         </p>
 
+        <!-- Video mit Dankestext -->
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/-GVT8xl9alE?si=H1HthV58fHSoQjRW" 
             title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; 
             encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <p>Wir möchten uns herzlich bei allen Teilnehmern bedanken, die an unserem Escape Room teilgenommen haben! Eure Begeisterung und euer Feedback sind uns sehr wichtig. <b>Vielen Dank</b>, dass ihr Teil dieses Abenteuers wart!</p>
 
+        <!-- Feedback-Formular -->
         <div class="form-section content">
-            <h2>Anmeldeformular</h2>
-            <p>Bitte fülle das folgende Formular aus, um dich für den Escape Room anzumelden. Die Teilnahmegebühr beträgt 10 CHF pro Person und ist nur vor Ort zu zahlen.</p>
-            <form action="https://formsubmit.co/03e3c684b041bfdaa129cd2de91e2d5c" method="POST" class="form-container" onsubmit="return validateForm()">
-                <input type="hidden" name="_next" value="https://hackingescaperoom.github.io/Escape-Room/danke.html"> <!-- Ersetze 'deinewebsite.com' mit deiner tatsächlichen Domain -->
-                <input type="hidden" name="_captcha" value="false"> <!-- Deaktiviert reCAPTCHA -->
-
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" placeholder="E-Mail" required>
+            <h2>Feedback geben</h2>
+            <p>Wir freuen uns über deine Meinung! Bitte teile uns dein Feedback mit, damit wir den Escape Room weiter verbessern können.</p>
+            <form action="https://formsubmit.co/03e3c684b041bfdaa129cd2de91e2d5c" method="POST" class="form-container">
+                <input type="hidden" name="_next" value="https://hackingescaperoom.github.io/Escape-Room/danke.html">
+                <input type="hidden" name="_captcha" value="false">
 
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="text" id="name" name="name" placeholder="Dein Name" required>
 
                 <label for="nachname">Nachname:</label>
-                <input type="text" id="nachname" name="nachname" placeholder="Nachname" required>
+                <input type="text" id="nachname" name="nachname" placeholder="Dein Nachname" required>
 
-                <!-- Dropdown für Zeitpunkte -->
-                <label for="zeitpunkt">Zeitpunkt auswählen:</label>
-                <select id="zeitpunkt" name="zeitpunkt" required>
-                    <option value="14:40-15:10">14:40 - 15:10 Uhr</option>
-                    <option value="15:20-15:50">15:20 - 15:50 Uhr</option>
-                    <option value="16:00-16:30">16:00 - 16:30 Uhr</option>
-                </select>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
 
-                <!-- Dropdown für Teilnehmer -->
-                <label for="teilnehmer">Anzahl Teilnehmer:</label>
-                <select id="teilnehmer" name="teilnehmer" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-
-                <!-- Zustimmung -->
-                <div class="consent">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Ich stimme zu, dass meine Anmeldeinformationen von hackingescaperoom.tech an FormSubmit weitergeleitet werden, um meine Anmeldung zu bearbeiten.</label>
+                <label for="interest">Würdest du an einem weiteren Hacking Escape Room teilnehmen?</label>
+                <div>
+                    <input type="radio" id="yes" name="interest" value="Ja" required>
+                    <label for="yes">Ja</label>
+                    <input type="radio" id="no" name="interest" value="Nein" required>
+                    <label for="no">Nein</label>
                 </div>
 
-                <!-- Absenden-Button -->
-                <button type="submit" class="submit-btn">Absenden</button>
-            </form>
-        </div>
+                <label for="feedback">Dein Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Teile uns deine Gedanken mit..." required></textarea>
 
-        <!-- Google Maps -->
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.3998230091615!2d9.040385176384847!3d47.46263762117702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aebc4910f6b4f%3A0xe67eae5a212bbb9e!2sWIOS%20Bildungszentrum%20(ehemals%20Wilingua%20und%20Ortega%20Wil)!5e0!3m2!1sde!2sba!4v1728330930163!5m2!1sde!2sba"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button type="submit" class="submit-btn">Feedback absenden</button>
+            </form>
         </div>
     </div>
 
@@ -243,6 +200,5 @@
             </a>
         </div>
     </div>
-
 </body>
 </html>
